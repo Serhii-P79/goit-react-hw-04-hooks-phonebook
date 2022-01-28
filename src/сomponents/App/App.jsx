@@ -15,7 +15,7 @@ export function App() {
   }, []);
 
   useEffect(() => {
-    console.log('save contacts');
+    //  console.log('save contacts');
     LocalApi.save('contacts', contacts);
   }, [contacts]);
 
@@ -26,11 +26,11 @@ export function App() {
           name.toLowerCase().includes(data.name.toLowerCase())
         )
       ) {
-        console.log('1');
+        //  console.log('1');
         alert(`${data.name} is already in contacts.`);
         return reject('Error! Error passed to reject function');
       }
-      console.log('2');
+      // console.log('2');
       setContacts(contacts => {
         return [
           ...contacts,
